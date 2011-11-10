@@ -1,0 +1,22 @@
+<section class="maintext">
+<h1>Preface--What are cancers in common?</h1>
+<p>Cancer genome is notorious for its highly varied types of chromosome changes, which include but not limit to loss of heterozygosity (LOH), chromosome loss/gain, copy number variation (CNV), and translocation. These complicated genetic alterations make it extremely hard to extract meaningful data from the chaos, which is further complicated by differences in individual cancer types. Decades of effort have been made in order to find a solution to this headachy and life-threatening disease. However, all therapies advanced so far--including tranditional non-specific methods like chemo-therapy, radiation treatment, and target-specific strategies like angiogenesis inhibitor or even gene therapy--shows little or very limited effect. This disappointing truth is largely caused by the highly varied nature of cancers. <b>Experiences tell us that the solution to any complex problems is by first figuring out the law/rule behind those complex phenomena.</b> This has been proven in the field of mathematics, physics, medical science.... We believe it is also applicable here to the problem of cancer.</p>
+<p>Different from what you may have seen in other articles on this topic. Here we are not discussing cancers' common properties at "High level", like they all are loss of control in replication (immortal), all have the potential to move around the body (metastasis). We are not even discussing some so-called common genetic characteristics, like they all show some kinds of <a href="http://www.sciencedirect.com/science/article/pii/S0168952507003848">chromosome instability (CIN)</a>, <a href="http://en.wikipedia.org/wiki/Loss_of_heterozygosity">LOH</a>, <a href="http://en.wikipedia.org/wiki/Copy_number_variation">CNV<a>, translocation.... Because, obviously, they indeed have those properties, but unlukily all of those properties show very different patterns across different cancer types, or different between individuals on same kind of cancer, or even between same kind of cancer cells in one individual.</p>
+<h1>What we can tell you about cancer?</h1>
+<p>So, is there any real common things that we can say sure about cancers? With the precious high throughput microarray data on 60 cancer cell lines (covered 6 different types of tissue) from National Cancer Institue (NCI) (<%=link_to("learn about NCI-60 cancer cell lines",'/page/nci60')%>), and with <a href="http://hapmap.ncbi.nlm.nih.gov/abouthapmap.html.en">HapMap Causacian healthy samples</a> (30 trio families), after our systematic analysis, our answer to this question is "YES!". Our analysis show an <b>extremely similar runs of homozygosity (ROH) pattern (differ only in strength) between cancer and normal cell lines.</b> We found that more severe ROH found in cancer cells is a continuation of ROH in healthy state. Thus unveiled the highly rhythmic aspect of cancers, which we think provides vital advance to the understanding of the nature of human genome and how it changes during tumorigenesis.</p>
+
+<p>Most people might not be familiar with the term "ROH". You can follow the link here to <%=link_to("learn about Runs Of Homozygosity (ROH) and ROH Frequency (ROHF)",'/page/roh')%>. Generally, ROH region in diploid organism means a genomic region with extended length of homozygous SNPs. It is a sign of low sequence diversity between maternal and paternal <a href="http://en.wikipedia.org/wiki/Chromatid">chromatid<a>. While ROH is used to describe SNP status of single individual, ROHF describes ROH status of a population. It represents the proportion of samples with ROH on specific SNP locus. Using Affymetrix 500K SNP array, we scanned the whole genome of each of the NCI-60 cell lines to get their SNP data. These data were then used to deduce the whole genome ROH status of each cell line, which were then used to calculate ROHF. Same operation was done for HapMap Caucasian healthy sample (N=90). The result is shown in figure 1</p>
+<table>
+	<tr>
+	  <td><%=image_tag("Figure1_small.png",:alt=>"Fig1",:title=>"Click for large one")%></td>
+	  <td>whole Several mechanisms may explain the formation of ROH region. First, natural mutation. If several mutations happened in close vicinity and 
+</td>
+	</tr>
+	<tr>
+	  <td>Fig 1 Highly similar ROH pattern between cancer and normal cell lines (<%=link_to("High Resolution",'/page/fig1')%>)(<%=link_to("Download",'/page/downloadfig1')%>).</td>
+	  <td></td>
+	</tr>
+</table>
+</section>
+
+
