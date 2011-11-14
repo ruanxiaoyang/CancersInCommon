@@ -6,8 +6,8 @@ gem 'rails', '3.1.1'
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
-
-
+gem 'ansi','1.4.1'
+gem 'coffee-script-source','1.1.3'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

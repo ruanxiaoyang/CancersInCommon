@@ -1,22 +1,85 @@
 <section class="maintext">
 <h1>Preface--What are cancers in common?</h1>
 <p>Cancer genome is notorious for its highly varied types of chromosome changes, which include but not limit to loss of heterozygosity (LOH), chromosome loss/gain, copy number variation (CNV), and translocation. These complicated genetic alterations make it extremely hard to extract meaningful data from the chaos, which is further complicated by differences in individual cancer types. Decades of effort have been made in order to find a solution to this headachy and life-threatening disease. However, all therapies advanced so far--including tranditional non-specific methods like chemo-therapy, radiation treatment, and target-specific strategies like angiogenesis inhibitor or even gene therapy--shows little or very limited effect. This disappointing truth is largely caused by the highly varied nature of cancers. <b>Experiences tell us that the solution to any complex problems is by first figuring out the law/rule behind those complex phenomena.</b> This has been proven in the field of mathematics, physics, medical science.... We believe it is also applicable here to the problem of cancer.</p>
-<p>Different from what you may have seen in other articles on this topic. Here we are not discussing cancers' common properties at "High level", like they all are loss of control in replication (immortal), all have the potential to move around the body (metastasis). We are not even discussing some so-called common genetic characteristics, like they all show some kinds of <a href="http://www.sciencedirect.com/science/article/pii/S0168952507003848">chromosome instability (CIN)</a>, <a href="http://en.wikipedia.org/wiki/Loss_of_heterozygosity">LOH</a>, <a href="http://en.wikipedia.org/wiki/Copy_number_variation">CNV<a>, translocation.... Because, obviously, they indeed have those properties, but unlukily all of those properties show very different patterns across different cancer types, or different between individuals on same kind of cancer, or even between same kind of cancer cells in one individual.</p>
+<p>Different from what you may have seen in other articles on this topic. Here we are not discussing cancers' common properties at "High level", like they all are loss of control in replication (immortal), all have the potential to move around the body (metastasis). We are not even discussing some so-called common genetic characteristics, like they all show some kinds of <a href="http://www.sciencedirect.com/science/article/pii/S0168952507003848">chromosome instability (CIN)</a>, <a href="http://en.wikipedia.org/wiki/Loss_of_heterozygosity">LOH</a>, <a href="http://en.wikipedia.org/wiki/Copy_number_variation">CNV<a>, <a href="http://en.wikipedia.org/wiki/Chromosomal_translocation">translocation</a>.... Because, obviously, they indeed have those properties, but unlukily all of those properties show very different patterns across different cancer types, or different between individuals on same kind of cancer, or even between same kind of cancer cells in one individual.</p>
 <h1>What we can tell you about cancer?</h1>
 <p>So, is there any real common things that we can say sure about cancers? With the precious high throughput microarray data on 60 cancer cell lines (covered 6 different types of tissue) from National Cancer Institue (NCI) (<%=link_to("learn about NCI-60 cancer cell lines",'/page/nci60')%>), and with <a href="http://hapmap.ncbi.nlm.nih.gov/abouthapmap.html.en">HapMap Causacian healthy samples</a> (30 trio families), after our systematic analysis, our answer to this question is "YES!". Our analysis show an <b>extremely similar runs of homozygosity (ROH) pattern (differ only in strength) between cancer and normal cell lines.</b> We found that more severe ROH found in cancer cells is a continuation of ROH in healthy state. Thus unveiled the highly rhythmic aspect of cancers, which we think provides vital advance to the understanding of the nature of human genome and how it changes during tumorigenesis.</p>
 
-<p>Most people might not be familiar with the term "ROH". You can follow the link here to <%=link_to("learn about Runs Of Homozygosity (ROH) and ROH Frequency (ROHF)",'/page/roh')%>. Generally, ROH region in diploid organism means a genomic region with extended length of homozygous SNPs. It is a sign of low sequence diversity between maternal and paternal <a href="http://en.wikipedia.org/wiki/Chromatid">chromatid<a>. While ROH is used to describe SNP status of single individual, ROHF describes ROH status of a population. It represents the proportion of samples with ROH on specific SNP locus. Using Affymetrix 500K SNP array, we scanned the whole genome of each of the NCI-60 cell lines to get their SNP data. These data were then used to deduce the whole genome ROH status of each cell line, which were then used to calculate ROHF. Same operation was done for HapMap Caucasian healthy sample (N=90). The result is shown in figure 1</p>
+<p>Most people might not be familiar with the term "ROH". You can follow the link here to <%=link_to("learn about Runs Of Homozygosity (ROH) and ROH Frequency (ROHF)",'/page/roh')%>. Generally, ROH region in diploid organism means a genomic region with extended length of homozygous <a href="http://en.wikipedia.org/wiki/Single-nucleotide_polymorphism">Single Nucleotide Polymorphism</a> (SNP)s. It is a sign of low sequence diversity between maternal and paternal <a href="http://en.wikipedia.org/wiki/Chromatid">chromatid<a>. While ROH is used to describe SNP status of single individual, ROHF describes ROH status of a population. It represents the proportion of samples with ROH on specific SNP locus. Using Affymetrix 500K SNP array, we scanned the whole genome of each of the NCI-60 cell lines to get their SNP data. These data were then used to deduce the whole genome ROH status of each cell line, which were then used to calculate ROHF. Same operation was done for HapMap Caucasian healthy sample (N=90). The result is shown in figure 1</p>
 <table>
 	<tr>
-	  <td><%=image_tag("Figure1_small.png",:alt=>"Fig1",:title=>"Click for large one")%></td>
-	  <td>whole Several mechanisms may explain the formation of ROH region. First, natural mutation. If several mutations happened in close vicinity and 
-</td>
+	  <td><%=link_to(image_tag("Figure1_small.png",:alt=>"Fig1",:title=>"Click for large one"),'/page/fig1')%></td>
+	  <td>  
+		<table>
+		  <tr>
+		    <td align="center"><%=image_tag("chr1.png",:alt=>"chr1",:width=>"100%")%></td>
+		  </tr>
+		  <tr>
+		    <td align="center">Zoomed view of Chromosome 1</td>
+		  </tr>
+		</table>
+	  </td>
 	</tr>
 	<tr>
 	  <td>Fig 1 Highly similar ROH pattern between cancer and normal cell lines (<%=link_to("High Resolution",'/page/fig1')%>)(<%=link_to("Download",'/page/downloadfig1')%>).</td>
 	  <td></td>
 	</tr>
 </table>
+<p>Now let me explain a little bit about this figure. It gives us a general view of the ROHF pattern on 22 autosomes and sex chromosomes. For each chromosome, the left most lane is the ROHF of NCI-60 cancer samples. The second lane is the ROHF of HapMap Caucasian samples. (I will introduce the two lanes on the right later.) What we see is an extremely similar ROHF pattern between cancer and normal samples. The only difference is that the ROHF is much higher in cancer samples (approx. 11 fold). Another noteworthy observation is that in heathy samples the ROHF is not equally distributed. For those regions where we see a relatively higher ROHF in healthy sample, we can usually see an even higher ROHF in cancer samples. To prove this point, a quantile cutoff was applied on HapMap ROHF and the result is illustrated in figure 2.</p>
+<table id="centertable">
+  <tr>
+    <td align="center"><a name="fig2"><%=image_tag("Figure2.png",:alt=>"Quantile Cutoff On HapMap ROHF")%></a></td>
+  </tr>
+  <tr>
+    <td align="center">Fig 2 Correlation between NCI-60 and HapMap ROHF at different quantile levels of HapMap ROHF</td>
+  </tr>
+</table>
+<p>From figure 2 we see that on population level if a region has low ROHF in healthy state, it is less likely to develop high ROHF in cancer state. However, if a region has a middle to higher level of ROHF in healthy state, it is very likely to retain the ROHF or develop an even higher level of ROHF in cancer state. In short, that is, if "the bad guy" is not there, it is unlikely that he will be there later. But once he is there, more and more "bad guys" will be there!. When comes to individual level, this reflects the extension of existing ROH to a wider range (I will explain this point later).</p>
+
+<p>It is very important to notice that the cancer samples used here totally have no relationship with those HapMap healthy samples. They were collected from different participants live in different places, at different times, by different researchers from different labs. The only concordances are that both sample groups are Caucasian, and that both were analzyed on same kind of microarray platform (Affymetrix 500K). This totally excluded the possibile sample contamination not rarely seen in cancer researches involving germ-line matched control. Moreover, rather than rely on single type of cancer, the cancer samples here covered 60 different cancer cell lines for 6 kinds of tissue--a really meaningless mixture as you may think at first glance. Thus excluded the potential bias caused by the unique genetic construct of a specific type of cancer. These stunning truthes tell us that what we see here is a general property of human cancer genome.</p>
+
+<h1>Is it age related?</h1>
+<p>We can do more with current data in hand. As you have seen in the second section, the HapMap healthy samples are actually 30 trio families. This means it i composed of 60 parents (adult) and 30 children (young). It would be interesting to ask "Is there any difference between adult and young groups on their ROHF". Moreover, if a higher age is related to more ROH, we should see higher ROHF in the adult group. This hypothesis was confirmed by our careful statistical analysis (number of adult was shrunked to 30 by 1000 random sampling to match with young number). The adult group has an average ROHF of 3.41% and the young group is 3.35%. This 0.06% difference was shown to be significant in both paired and non-paired t-test after Bonferroni correction (p<1.1e-10). Among the 1000 randomly generated adult sample groups, 747(743) show significant difference from young group, and 72.9%(92.3%) of those significant datasets have higher ROHF than young [number calculated from ROH deduced by HMM and PLINK(in parentheses)]. However, here I have to admit that this small difference makes the story somewhat less convincing. Anyway, it is easy to obtain small P-value with large sample size, especially for microarrays with usually 0.5-1 million SNPs. At this scale of sample size, aim-less data mining is a dangerous behavior that exposes highly to false positive result. Nevertheless, the analysis here is based well on several biological discoveries. One is done by <a href="#ref2">Moragoda et al.</a> who described age-associated stomach mucosa LOH among healthy people over 60 year of age. Another a a review from <a href="#ref1">Carr, L. L. et al.</a> who described several evidences of age-related LOH in both human and model organisms. All these findings persuade us to believe the above small but significant difference is not observed by chance and is from biological consequence.</p>
+
+<p>Despite of these evidences, it is still not scientifically sound to say "it is age related". Because what we have here is a categorical variable (either "adult" or "young"). We also don't know whether it is caused by other factors, like diseases or epigenetic changes that were not considered here.</p>
+
+
+<h1>How does that happen?</h1>    
+<p>So what can explain the formation of ROH regions? The first that comes to our mind might be natural mutation. Sincerely, if several mutations occured in close vicinity and happen to result in heterozygotes-&rsaquo;homozygotes change, a new ROH region may take form. However, this is highly impossible because the rate of <a href="http://en.wikipedia.org/wiki/Mutation_rate">natural mutation</a> is extremely low (~1.1×10<sup>-8</sup>) in human genome. Another machanism is mitotic recombination, which we think is the most reasonable explantion.</p>
+<table id="centertable">
+	<tr>
+	  <td align="center"><%=image_tag("Mitotic_recombination.png",:alt=>"Mitotic recombi")%></td> 
+	</tr>
+	<tr>
+	  <td align="center">Fig 3. Mitotic recombination</td>
+	</tr>
+</table>
+<p>Figure 3 illustrated the mitotic recombination process where two heterozygotes changed to homozygotes in progeny. Rather than purely start form scratch, the chance of mitotic recombination is positively correlated with the sequence similarity between paternal and maternal chromatids. Studies in <a href="#ref3">E. coli</a>, <a href="#ref4">Trypanosoma brucei</a>, and <a href="#ref5">mouse</a> show the importance of extended sequence similarity/diversity in promoting/preventing homologous recombination. This mechanism is now very commonly used in biopharmacy industry where a target gene can be transfected into host bacteria through recombination. Based on these evidences, we come up with a figure to illustrate how ROH may extend.</p>
+<table>
+	<tr>
+	  <td width="450px"><%=image_tag("ROH_extension.png",:alt=>"ROH extension",:size=>"300x600")%></td>
+	  <td width="400px" valign="top"><p>In figure 4, blue and pink chromatids are from father and mother respectively. Brown regions are homozygotes region where the paternal and maternal chromatids are identical(or highly similar) to each other. The short gap is a small region with heterozygotes. The mitotic recombination, if happened over the two ROH regions next to each other, will change the heterozygotes gap in parental cell to homozygotes in progenies. In reality, the ROH extension mechanism may not be limited to the one shown here. However, no matter how it may happen, the final result is that its progenies will be homozygous on that region forever. It is like a "One-way" ticket because from nowhere can its progenies restore the heterozygotes (except very rare cases like natural mutation). The mechanism here can explain what we saw in <a href="#fig2">figure 2</a>, where a stronger ROHF correlation was found between cancers and healthy sample on regions that already show ROH in healty sample.</p>
+	</td>
+	</tr>
+	<tr>
+	  <td>Fig 4. Extension of ROH region</td>
+	  <td></td>
+	</tr>
+</table>
+<p>Beside the extension from existing ROH region, other mechanisms may also explain the formation of high ROHF region. Among many possible explanations, we found that fragile site (FRA) plays an important role here. 
+
+
+
+
+<%10.times do |t|%>
+</br>
+<%end%>
+<ul>
+	<li><a name="ref1">Carr, L. L. and Gottschling, D. E., Does age influence loss of heterozygosity?, Exp.Gerontol. 43 (2008) 123-129.</a></li>
+	<li><a name="ref2">Moragoda, L., Jaszewski, R., Kulkarni, P., and Majumdar, A. P., Age-associated loss of heterozygosity of tumor suppressor genes in the gastric mucosa of humans, Am.J.Physiol Gastrointest.Liver Physiol 282 (2002) G932-G936.</a></li>
+	<li><a name="ref3">Shen, P. and Huang, H. V., Homologous recombination in Escherichia coli: dependence on substrate length and homology, Genetics 112 (1986) 441-457.</a></li>
+	<li><a name="ref4">Barnes, R. L. and McCulloch, R., Trypanosoma brucei homologous recombination is dependent on substrate length and homology, though displays a differential dependence on mismatch repair as substrate length decreases, Nucleic Acids Res. 35 (2007) 3478-3493.</a></li>
+	<li><a name="ref5">Shao, C., Stambrook, P. J., and Tischfield, J. A., Mitotic recombination is suppressed by chromosomal divergence in hybrids of distantly related mouse strains, Nat.Genet. 28 (2001) 169-172.</a></li>
+</ul>
+
 </section>
-
-

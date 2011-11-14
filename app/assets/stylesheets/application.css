@@ -24,10 +24,16 @@
 	text-align:	center;
 	}
 
+#centertable{
+	margin-left:	auto;
+	margin-right:	auto;
+	}
+
 .maintext {
 	width:		850px;
 	margin-left:	auto;
 	margin-right:	auto;
+	text-align:	justify;
 	}
 
 footer li {
