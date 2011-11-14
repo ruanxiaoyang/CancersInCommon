@@ -1,0 +1,34 @@
+<section class="maintext">
+<h1>What is Runs Of Homozygosity</h1>
+<p>&nbsp;&nbsp;What is Runs Of Homozygosity (ROH)? As the name has explained, it means a consecutive runs of <a href="http://en.wikipedia.org/wiki/Zygosity#Homozygous">homozygous</a> <a href="http://en.wikipedia.org/wiki/Single-nucleotide_polymorphism">Single Nucleotide Polymorphisms</a> (SNP) on a long genomic region. However, there is no agreement on exactly what length of homozygotes can be called a ROH. </p>
+<div id="centerimg">
+<%=image_tag("ROH.png",:alt=>"ROH illustration",:width=>"50%")%>
+</div>
+<p>The most commonly used standard to define ROH was systematically discussed by <a href="#ref1">Chee seng ku .et al(2011)</a>. The following table summarized the range of key parameters. The actual criteria used also depend on the SNP array used. Beside these criteria, there are also other restrictions like the identified homozygotes region must be consistently observed in several samples.</p> 
+<div id="centerimg">
+<%=image_tag("ROH_criteria.png",:alt=>"ROH criteria",:width=>"60%")%>
+</div>
+<h1>How to detect ROH</h1>
+<p>Several stratigies can be used to detect ROH. The simplest one is by setting up a fixed size window that moves along the genomic sequence. Inside the window we figure out whether the number of homozygotes/heterozygotes/missed calls, as well as criteria listed above are met. The execution of this simple strategy is available in <a href="http://pngu.mgh.harvard.edu/~purcell/plink/ibdibs.shtml#homo">PLINK</a> runs of homozygosity module. while simple and relatively easy to understand, it has several shortages. First, the result is significantly influenced by the parameters used. Second, it is susceptible to interrupting heterozygotes. Finally, their is no agreement yet on how to choose the parameters.</p>   
+<p>An alternative way to detect ROH is by using Hidden-Markov Model (HMM). Generally, HMM treats SNPs' status as a string of text that switches between homozygotes and heterozygotes. By locating the position where transition probability is higher than a given threshold, HMM differentiates ROH region from normal heterozygosity regions.</p> 
+<div id="centerimg">
+<%=image_tag("HMM_principle.png",:alt=>"HMM principle",:width=>"60%")%>
+</div>
+<p>Compare to the fixed-window based strategy, HMM is less sensitive to iterrupting heterozygotes. However, we still need to note that the selection of transition probability threshold still affects the final result. The execution of HMM is available in <a href="http://www.r-project.org/">R</a> <a href="http://cran.r-project.org/web/packages/HMM/index.html">HMM package</a>, or can be found in <a href="https://sites.google.com/site/dchipsoft/">dChip</a> basic-HMM module.</p>
+<h1>ROH Frequency (ROHF)</h1> 
+<p>ROH frequency is used to characterize the ROH status of a SNP in a population. It is calculated as the proportion of SNPs in ROH state in your sample group.</p>
+<div id="centerimg">
+<%=image_tag("ROH_region.png",:alt=>"ROH region",:width=>"60%")%>
+</div> 
+<p>In the above example, SNP A has a ROHF of 4/6=0.67 and B has a ROHF of 1/6=0.17. Epidemiologically, a high ROHF means the affected genomic region in that population has higher similarity between maternal and paternal alleles. </p>
+
+
+</section>
+<%10.times do |t|%>
+</br>
+<%end%>
+
+<ul>
+	<li><a name="ref1">Regions of homozygosity and their impact on complex diseases and traits. Human Genetics 2011</a></li>
+</ul>
+
