@@ -77,8 +77,28 @@
 	</tr>
 </table>
 
-<h1>What genes show the highest ROHF difference between cancer and normal samples</h1>
-<p></p>
+<h1>Pathways enriched in the highest ROHF difference region</h1>
+<p>It would be interesting to find out what biological pathways were involved in the regions that show highest difference between cancer and normal samples. To do this, we submitted the SNP probe ids to GeneGO, a webtool for pathway analysis. Result shows that G1_S cell cycle process ranked first. The genes that show high ROHF difference in this process were listed below</p>
+<table>
+	<tr><td>
+	<table border=1>
+		<tr>
+			<th>Gene Symbol</th>
+			<th>Standard Name</th>
+			<th width="50px">Chr</th>
+			<th width="60px">Position(Mb)</th>
+			<th width="100px">ROHF<sub>NCI-60</sub><sup>a</sup></th>
+			<th width="120px">ROHF<sub>HapMap</sub><sup>a</sup></th>
+			<th>FRA<sup>b<sup></th>
+		</tr>
+			<%=render :partial=>'t1gene',:collection=>@table1%>
+	</table>
+	</td></tr>
+	<tr><td><sup>a</sup> Values are shown as mean(standard deviation)</br>
+		<sup>b</sup> Whether there is a fragile site in ±5M range					
+	</td></tr>
+</table>
+<p>Here we noticed the involvement of several onco-related genes like Claspin and P53. Claspin is required for cell replication checkpoint control. P53 is a well-known protein that is in charge of the apoptosis. Unluckily, we can not show you here how the ROHF change may quantitatively/qualitatively affect these genes. </p>
 
 
 

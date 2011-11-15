@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  GeneSymbol: MyString
+  StdName: MyString
+  Chr: MyString
+  Pos: MyString
+  NCIROHF: MyString
+  HAPMAPROHF: MyString
+  FRA: MyString
+
+two:
+  GeneSymbol: MyString
+  StdName: MyString
+  Chr: MyString
+  Pos: MyString
+  NCIROHF: MyString
+  HAPMAPROHF: MyString
+  FRA: MyString

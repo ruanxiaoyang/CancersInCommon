@@ -1,6 +1,7 @@
 class PageController < ApplicationController
   def home
 	@title="Home"
+	@table1=Table1.all
   end
 
   def contact
