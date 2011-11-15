@@ -25,6 +25,6 @@ class PageController < ApplicationController
   end
 
   def downloadfig1
-	send_file "/home/ruan/Documents/rails_projects/firstwebsite/app/assets/images/Figure1.png"
+	send_file "app/assets/images/Figure1.png"
   end
 end
