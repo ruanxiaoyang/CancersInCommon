@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111115034437) do
+ActiveRecord::Schema.define(:version => 20111115215453) do
 
   create_table "table1s", :force => true do |t|
     t.string   "GeneSymbol"
@@ -23,6 +23,24 @@ ActiveRecord::Schema.define(:version => 20111115034437) do
     t.string   "FRA"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "ts1s", :force => true do |t|
+    t.string   "ChrN"
+    t.string   "pqN"
+    t.string   "pN"
+    t.string   "qN"
+    t.string   "FRAN"
+    t.string   "pqH"
+    t.string   "pH"
+    t.string   "qH"
+    t.string   "FRAH"
+    t.string   "corr"
+    t.integer  "SNPnum"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "PvalN"
+    t.string   "PvalH"
   end
 
 end
