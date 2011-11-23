@@ -11,6 +11,8 @@ Firstwebsite::Application.routes.draw do
 
   get "page/fig1"
 
+  get "page/fig1_PLINK"
+
   get "page/downloadfig1"
 
   get "page/tablesone"
