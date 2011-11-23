@@ -13,7 +13,7 @@
 	}
 
 #footerstyle{
-	background:	white;
+	background:	pink;
 	width:		900px;
 	text-align:	center;
 	margin-left:	auto;
@@ -34,9 +34,9 @@
 	margin-right:	auto;
 	text-align:	justify;
 	}
-
 footer li {
 	display:	inline-block;
+	padding:	50px;
 }
 
 

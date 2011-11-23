@@ -1,0 +1,45 @@
+<table border="1">
+<tr>
+	<th></th>
+	<th colspan="5">NCI-60</th>
+	<th colspan="5">HapMap</th>
+	<th colspan="2"></th>
+</tr>
+<tr>
+	<th>Chr</th>
+	<th>p+q<sup>a</sup></th>
+	<th>p</th>
+	<th>p</th>
+	<th>FRA corr <sup>b</sup></th>
+	<th>P(FRA corr)</th>
+	<th>p+q</th>
+	<th>p</th>
+	<th>q</th>
+	<th>FRA corr</th>
+	<th>P(FRA corr)</th>
+	<th>Corr <sup>c</sup></th>
+	<th>SNP num</th>
+</tr>
+<% @tables1.each do |t|%>
+<tr>
+	<td><%=t.ChrN%></td>
+	<td><%=t.pqN %></td>
+	<td><%=t.pN%></td>
+	<td><%=t.qN%></td>
+	<td><%=t.FRAN%></td>	
+	<td><%=t.PvalN%></td>	
+	<td><%=t.pqH%></td>	
+	<td><%=t.pH%></td>	
+	<td><%=t.qH%></td>	
+	<td><%=t.FRAH%></td>	
+	<td><%=t.PvalH%></td>	
+	<td><%=t.corr%></td>	
+	<td><%=t.SNPnum%></td>	
+</tr>
+<%end%>
+</table>
+<p><sup>a</sup> p and q stands for short and long arm, respectively </br>						
+<sup>b</sup> Pearson correlation between HOAF and FRA(±5M)	</br>							
+<sup>c</sup> Pearson correlation between the NCI-60 and HapMap HOAF, all p values less than 1e-10 after controlling for SNP density</br>
+<sup>d</sup> No SNP coverage on Affymetrix 500k array</p>		
+

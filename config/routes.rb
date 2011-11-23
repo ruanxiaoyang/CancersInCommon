@@ -12,6 +12,8 @@ Firstwebsite::Application.routes.draw do
   get "page/fig1"
 
   get "page/downloadfig1"
+
+  get "page/tablesone"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

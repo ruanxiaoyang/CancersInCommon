@@ -25,6 +25,11 @@ class PageController < ApplicationController
 	@title="Figure 1"
   end
 
+  def tablesone
+	@title="Correlation Table"
+	@tables1=Ts1.all
+  end
+
   def downloadfig1
 	send_file "app/assets/images/Figure1.png"
   end
