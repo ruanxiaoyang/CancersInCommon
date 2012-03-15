@@ -1,5 +1,5 @@
 module ApplicationHelper
   def title
-	return "Caners in Common | #@title"
+	return "Cancers in Common | #@title"
   end
 end
